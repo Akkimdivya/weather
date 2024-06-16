@@ -54,7 +54,7 @@ function Inputs({ setQuery, units, setUnits }) {
           onChange={(e) => setCity(e.currentTarget.value)}
           type="text"
           placeholder="Search for city...."
-          className="search-input"
+          className="search-input text-black"
         />
         <UilSearch
           size={25}
