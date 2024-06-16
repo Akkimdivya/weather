@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+.light-mode {
+  background-color: white;
+  color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dark-mode {
+  background-color: black;
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputs-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search-input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+.search-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+
+.search-icon:hover {
+  transform: scale(1.1);
+}
+
+.units-container {
+  display: flex;
+  align-items: center;
+}
+
+.unit-button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+
+.unit-button:hover {
+  transform: scale(1.1);
+}
+
+.unit-separator {
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .search-input {
+    font-size: 0.8rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 480px) {
+  .search-input {
+    font-size: 0.7rem;
   }
+}
+
+.light-dark-toggle {
+  margin-top: 1rem;
+}
+
+.light-dark-toggle button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.light-dark-toggle button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .light-dark-toggle {
+    justify-content: center;
+  }
+}
+
+
+.top-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.top-button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.top-button:hover {
+  background-color: #e0e0e0;
+}
+
+@media screen and (max-width: 768px) {
+  .top-buttons-container {
+    flex-wrap: wrap;
+  }
+
+  .top-button {
+    margin: 0.5rem;
+  }
+}
+
+
+.temperature-and-details-container {
+  padding: 1rem;
+}
+
+.details-header {
+  text-align: center;
+}
+
+.temperature-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.temperature {
+  font-size: 3rem;
+}
+
+.details-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+}
+
+.detail-icon {
+  margin-right: 0.5rem;
+}
+
+.detail-value {
+  font-weight: bold;
+}
+
+.additional-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.additional-details .detail {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .temperature {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .temperature {
+    font-size: 1.5rem;
+  }
+
+  .details-column {
+    align-items: flex-start;
+  }
+}
+.time-and-location-container {
+  text-align: center;
+  padding: 1rem;
+}
+
+.time {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  font-size: 1.5rem;
 }
