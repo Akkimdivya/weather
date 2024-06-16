@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import LightDarkToggle from "./components/LightDark";
 
 function App() {
-  const [query, setQuery] = useState({ q: "India" });
+  const [query, setQuery] = useState({ q: "Tirupati" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
   const [dailyWeather, setDailyWeather] = useState(null);
